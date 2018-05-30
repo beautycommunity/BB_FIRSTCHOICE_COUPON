@@ -64,7 +64,7 @@ namespace BB_FIRSTCHOICE_COUPON
                 if (txtSMS.Text != "")
                 {
                     int cnt = 0;
-                    string sql = "select count(*) cnt from [dbBeautyCommsupport]..DAT_FIRSTCHOICE where CVCNO = '" + txtSMS.Text + "'";
+                    string sql = "select count(*) cnt from [dbBeautyCommsupport]..DAT_FIRSTCHOICE where cflag = 0 and CVCNO = '" + txtSMS.Text + "'";
                     using (cWaitIndicator cw = new cWaitIndicator())
                     {
                         DataSet ds = new DataSet();
